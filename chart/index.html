@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="chart-heading">
+            <div class="chart-container">
+                <canvas class="my-chart"></canvas>
+
+            </div>
+            <div class="details">
+                <ul class="list-unstyled p-0 ">
+                    <!-- <li>Python: <span class="percentage">30%</span></li>
+                    <li>Python: <span class="percentage">30%</span></li>
+                    <li>Python: <span class="percentage">30%</span></li>
+                    <li>Python: <span class="percentage">30%</span></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- chart two -->
+        <div class="chartcard">
+            <div class="chartbox">
+                <canvas id="myChart"></canvas>
+                <!-- <div class="degend">
+                    <ul>
+                        <li><span>colorbox</span><p>text</p></li>
+                        <li><span>colorbox</span><p>text</p></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- chart 3 -->
+
+        <div class="card">
+            <div class="card-body">
+                <h5>chart detail</h5>
+                <hr>
+                <canvas id="myChart1"></canvas>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./java.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        var ctx = document.getElementById('myChart1').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: Utils.CHART_COLORS.red,
+            data: [0, 10, 5, 2, 20, 30, 45],
+            borderWidth: 1,
+            radius: 0,
+      data: data,
+        }, {
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: Utils.CHART_COLORS.blue,
+            data: [40, 15, 18, 41, 10, 40, 45],
+            borderWidth: 1
+        }, {
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(25, 241, 12)',
+            data: [10, 18, 38, 11, 19, 10, 28],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        animation,
+    interaction: {
+      intersect: false
+    },
+    plugins: {
+      legend: false
+    },
+    scales: {
+      x: {
+        type: 'linear'
+      }
+    }
+  },
+});
+    </script>

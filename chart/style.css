@@ -1,0 +1,67 @@
+.chart-heading {
+    color: #023047;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+    width: fit-content;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 8px 32px;
+    transition: all 400ms ease;
+}
+.chart-container {
+    width: 400px;
+}
+.chart-heading:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+}
+.chart-heading .details ul li {
+    font-size: 16px;
+    padding: 12px 0;
+    text-transform: uppercase;
+}
+.chart-heading .details .percentage {
+    font-weight: 700;
+    color: #e63946;
+}
+
+.chartcard {
+    width: 100vw;
+    height: calc(100vh - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chartbox {
+    width: 700px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 26, 104, 1);
+    background: white;
+}
+#custumLegend ul {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0;
+    padding: 0;
+}
+#custumLegend ul li {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+    flex-direction: row !important;
+    margin-bottom: 5px !important;
+}
+#cunstomLegend ul li span {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="">
+    <title>Chart js</title>
+</head>
+<body>
+    
+    <div><canvas id="buyers" width="600" height="400"></canvas></div>
+    <div><canvas id="countries" width="600" height="400"></canvas></div>
+    <div><canvas id="income" width="600" height="400"></canvas></div>
+    <div><canvas id="myChart1" width="600" height="400"></canvas></div>
+    <div>
+        <canvas id="myChart" width="300" height="200"></canvas>
+      </div>
+
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+<script src="./custom.js"></script>
+</html>
+
+<script>
+    const labels = Utils.months({count: 7});
+const data = {
+    type: 'doughnut',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+  labels: labels,
+  datasets: [{
+    label: 'My First Dataset',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+    borderWidth: 1
+  }]
+};
+</script>
+
+
+<script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: [
+    'Rsearch',
+    'Design',
+    'Frontend',
+    'Backend'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [35, 35, 41, 45],
+    backgroundColor: [
+      'rgb(241, 66, 27)',
+      'rgb(6, 180, 138)',
+      'rgb(101, 96, 240)',
+      'rgb(111, 211, 247)'
+    ],
+    hoverOffset: 0.8,
+    cutout: '90%',
+  }]
+}
+    });
+  </script>
